@@ -1,0 +1,2 @@
+class NoDataSource(Exception):
+    pass
