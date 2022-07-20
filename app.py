@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 from exceptions import NoDataSource
 from main.views import main_blueprint

@@ -55,7 +55,8 @@ def get_post_by_pk(pk):
     for item in data:
         if item["pk"] == pk:
             post = item
-    if post == {}:
+        return post
+    if not post:
         raise ValueError("Нет такого поста")
 
 
@@ -95,3 +96,5 @@ def delete_bookmark(post_id):
     except (FileNotFoundError, json.JSONDecodeError):
         raise NoDataSource("Нет файла с данными, либо он поврежден")
 
+
+print(get_post_by_pk(1))

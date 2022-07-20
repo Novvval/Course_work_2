@@ -7,7 +7,7 @@ main_blueprint = Blueprint('main_blueprint', __name__, url_prefix="/", static_fo
 @main_blueprint.route('/')
 def get_all_posts():
     data = get_posts_all()
-    bookmarks = len(return_data("data\\bookmarks.json"))
+    bookmarks = len(return_data("data/bookmarks.json"))
     return render_template("index.html", data=data, bookmarks=bookmarks)
 
 
@@ -39,7 +39,7 @@ def get_tags(tag):
 
 @main_blueprint.route("/bookmarks/")
 def get_bookmarks():
-    bookmarks = return_data("data\\bookmarks.json")
+    bookmarks = return_data("data/bookmarks.json")
     return render_template("bookmarks.html", bookmarks=bookmarks)
 
 
