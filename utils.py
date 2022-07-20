@@ -95,6 +95,3 @@ def delete_bookmark(post_id):
             json.dump(data, file, ensure_ascii=False, indent=4)
     except (FileNotFoundError, json.JSONDecodeError):
         raise NoDataSource("Нет файла с данными, либо он поврежден")
-
-
-print(get_post_by_pk(1))
